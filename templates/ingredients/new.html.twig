@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+<div class="new">
+
+{{ form_start(form) }}
+
+<div class="spacing">
+{{form_label(form.genre)}}
+
+</div>
+<div class="inputSpacing">
+{{form_widget(form.genre)}}
+</div>
+<div class="spacing">
+{{form_label(form.name)}}
+
+</div>
+<div class="inputSpacing">
+{{form_widget(form.name)}}
+</div>
+<div class="spacing">
+{{form_widget(form.image)}}
+</div>
+
+<div class="spacing">
+{{form_label(form.submit)}}
+</div>
+{{ form_row(form.submit)}}
+
+{{form_end(form)}}
+
+</div>
+
+{% endblock %}
