@@ -1,0 +1,13 @@
+{% include 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="new">
+        <h1 class="articleTitle titlecolor">Création d'un genre</h1>
+        {{ form_start(form) }}
+        {{ form_widget(form.name) }}
+        <div class="submitGenre">{{ form_row(form.submit) }}</div>
+        {{ form_end(form) }}
+    </div>
+    
+{% endblock %}
