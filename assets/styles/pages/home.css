@@ -1,0 +1,180 @@
+.bannerImg {
+    padding-top: 200px;
+    max-width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.top {
+    padding-top: 100px;
+}
+
+.homeSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    gap: 20px;
+    padding-bottom: 200px;
+}
+
+.homeSection .right {
+    text-align: right;
+}
+
+.homeSection .left {
+    text-align: left;
+}
+
+.homeSection .borderText {
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.homeSection .midText {
+    padding-left: 20px;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.homeSection img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.opinionContainer .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.storyContainer {
+    padding-bottom: 200px;
+}
+
+.storyContainer .storyFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.storyContainer .storyFlex img {
+    margin-right: auto;
+    max-width: 50%;
+    margin-left: auto;
+}
+
+.storyContainer .storyFlex .storyText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.storyContainer .storyFlex .storyText a {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.storyContainer .storyFlex .storyText p {
+    padding-top: 10px;
+    font-size: 1em;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.opinionContainer {
+    padding: 20px;
+    padding-bottom: 200px;
+}
+
+.opinionContainer .opinion_texts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.opinionContainer .opinion_texts div {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.opinionContainer .opinion_texts div p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+    .homeSection img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .homeSection .right, .homeSection .left {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .border {
+        flex-direction: column;
+    }
+
+    .mid {
+        flex-direction: column-reverse;
+    }
+
+    .borderText,
+    .midText {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .storyFlex {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .storyFlex img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .storyText {
+        width: 100%;
+    }
+
+    .storyText p {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .opinion_texts {
+        flex-direction: column;
+    }
+
+    .homeSection img {
+        width: 200px;
+        height: 200px;
+    }
+}
