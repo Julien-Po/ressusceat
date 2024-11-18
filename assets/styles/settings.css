@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  background-color: #041E2A;
+  min-height: 100vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.textStyle {
+  color: #EFE7DA;
+  font-family: Montserrat, sans-serif;
+}
+
+.inputColor {
+  background-color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.title {
+  color: #A28C3B;
+  font-family: Aleo, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #A28C3B;
+}
+
+.bottom {
+  padding-bottom: 200px;
+}
+
+.left {
+  padding-left: 100px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar {
+  padding: 200px 0;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #A28C3B;
+  border-radius: 30px;
+  color: #A28C3B;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .button {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+}

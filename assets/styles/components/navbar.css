@@ -1,0 +1,170 @@
+.mainHeader {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 90%;
+    padding: 0 10vw;
+    color: black;
+    z-index: 1;
+    transition: 0.4s ease-out;
+  }
+  
+  .mainHeader .logo {
+    border-radius: 50%;
+  }
+  
+  .mainHeader .logo .imgLogo {
+    padding-top: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .mainHeader a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+  }
+  
+  .mainHeader .navLinksBottom {
+    padding-right: 160px;
+  }
+  
+  .mainHeader .navLinks {
+    display: flex;
+  }
+  
+  .mainHeader .navLinks .navLink a {
+    margin: 0.2rem;
+    padding: 1rem 0.5rem;
+  }
+  
+  .mainHeader .navLinks .navLink a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .mainHeader .menuIcon {
+    position: relative;
+    padding: 26px 10px;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .mainHeader .menuIcon .menuIconLine {
+    display: block;
+    position: relative;
+    background: white;
+    height: 2px;
+    width: 20px;
+    border-radius: 4px;
+  }
+  
+  .mainHeader .menuIcon .menuIconLine::before,
+  .mainHeader .menuIcon .menuIconLine::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    background: white;
+    transition: background 0.8s ease;
+  }
+  
+  .mainHeader .menuIcon .menuIconLine::before {
+    transform: translateY(-5px);
+  }
+  
+  .mainHeader .menuIcon .menuIconLine::after {
+    transform: translateY(5px);
+  }
+  
+  .mainHeader .menuBtn {
+    display: none;
+    position: absolute;
+  }
+  
+  .mainHeader.scrolled {
+    height: 50px;
+  }
+  
+  .mainHeader.scrolled .menuIcon .menuIconLine,
+  .mainHeader.scrolled .menuIcon .menuIconLine::before,
+  .mainHeader.scrolled .menuIcon .menuIconLine::after {
+    background: white;
+  }
+  
+  /* Responsivité pour les écrans plus petits */
+  @media screen and (max-width: 767px) {
+    .mainHeader .menuIcon {
+      display: block;
+    }
+  
+    .mainHeader .logo {
+      display: none;
+    }
+  
+    .mainHeader .navLinks {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100vw;
+      font-size: 2rem;
+      color: white;
+      background: #000;
+      transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+      clip-path: circle(200px at top right);
+    }
+  
+    .mainHeader .navLinksTop {
+      top: 65px; /* Height of the header */
+      height: 50vh;
+      padding: 1rem 0;
+    }
+  
+    .mainHeader .navLinksBottom {
+      top: calc(65px + 50vh);
+      height: 50vh;
+      padding: 1rem 0;
+    }
+  
+    .mainHeader .navLink {
+      display: block;
+    }
+  
+    .mainHeader .menuBtn:checked ~ .navLinks {
+      opacity: 1;
+      clip-path: circle(100% at center);
+      transform: translateY(-10%);
+    }
+  
+    .mainHeader .menuBtn:checked ~ .navLinksTop {
+      transform: translateY(-20%);
+    }
+  
+    .mainHeader .menuBtn:checked ~ .navLinksBottom {
+      transform: translateY(-20%);
+    }
+  
+    .mainHeader .menuBtn:not(:checked) ~ .navLinks {
+      transform: translateY(-10%);
+    }
+  
+    .mainHeader .menuBtn:checked ~ .menuIcon .menuIconLine {
+      background: #fff;
+    }
+  
+    .mainHeader .menuBtn:checked ~ .menuIcon .menuIconLine::before {
+      background: #fff;
+    }
+  
+    .mainHeader .menuBtn:checked ~ .menuIcon .menuIconLine::after {
+      background: #fff;
+    }
+  }
+  
