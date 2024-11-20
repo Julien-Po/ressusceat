@@ -1,0 +1,28 @@
+{% block main %}
+<h1 class="title top">Créer un nouveau calendrier</h1>
+
+{{ form_start(form) }}
+    <div class="spacing ">
+        {{ form_label(form.title) }}
+    </div>
+    <div class="inputSpacing">
+        {{ form_widget(form.title) }}
+    </div>
+
+    <div class="spacing">
+        {{ form_label(form.start) }}
+    </div>
+    <div class="inputSpacing">
+        {{ form_widget(form.start) }}
+    </div>
+
+    <div class="spacing">
+        {{ form_label(form.description) }}
+    </div>
+    <div class="inputSpacing">
+        {{ form_widget(form.description) }}
+    </div>
+
+    <button class="btn">{{ button_label|default('Réserver') }}</button>
+{{ form_end(form) }}
+{% endblock %}

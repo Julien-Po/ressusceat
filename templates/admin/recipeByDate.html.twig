@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block main %}
+<div class="spacingTop left">
+    <div class="cards-container">
+        {% for calendar in recipesOfTheDay %}
+            {% for recipe in calendar.recipes %}
+        {{ dump(calendar.recipes.isServed) }}
+            {% endfor %}
+                {# {% if not recipe.isServed %} #}
+                    <div class="card">
+                        <h2 class="title">{{ calendar.title }}</h2>
+                        <p class="textStyle">Description : {{ calendar.description }}</p>
+                        <p class="textStyle">Date de début: {{ calendar.start|date('Y-m-d H:i') }}</p>
+                        <p class="textStyle">Recette par: {{ calendar.user.fullName }}</p>
+                        <a class="button" href="{{ path('app_recipes_user', {'clientId': calendar.user.id}) }}">Détails de la commande</a>
+                    </div>
+                {# {% endif %} #}
+        {% endfor %}
+    </div>
+</div>
+
+{{ form_start(form) }}
+<div class="new">
+    <div class="spacing textStyle">
+        {{ form_label(form.date) }}
+    </div>
+    <div class="inputSpacing">
+        {{ form_widget(form.date) }}
+    </div>
+    
+    <div class="inputSpacing">
+        {{ form_widget(form.submit) }}
+    </div>
+</div>
+{{ form_end(form) }}
+{% endblock %}

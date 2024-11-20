@@ -1,0 +1,21 @@
+
+{% block main %}
+
+ {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('styles/app.scss') }}">
+    {% endblock %}
+
+    <footer class="footer">
+        <div class ="footerElements">
+            <a href="/">
+                <img class="imgLogo" src="{{ asset('img/Logo.png') }}" alt="logoselecteat">
+            </a>
+             <a href="/mentions" class="mentions title">Mentions légales</a>
+            <div>
+                <img class="imgTwitter mediaImg" src="{{ asset('img/facebooklogo.svg') }}" alt="logofacebook">
+                <img class="imginstagram mediaImg" src="{{ asset('img/instalogo.png') }}" alt="logoInsta">
+                <img class="imgTiktok mediaImg" src="{{ asset('img/linkedinlogo.svg') }}" alt="logoLinkedin">
+            </div>
+        </div>
+    </footer>
+ {% endblock %}
