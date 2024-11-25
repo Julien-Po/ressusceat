@@ -1,0 +1,26 @@
+{% include 'base.html.twig' %}
+
+{% block body %}
+
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th>Liste des types</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for type in types %}
+                <tr>
+                    <td>
+                        {{ genre.name }}
+                        <a href="{{ path('edit_types', { 'id': type.id }) }}">Modifier</a>
+                        <a href="{{ path('delete_types', { 'id': type.id }) }}">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
